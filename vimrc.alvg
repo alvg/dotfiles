@@ -1,0 +1,282 @@
+set nocompatible
+
+set nowrapscan
+set showmode
+set showmatch
+set noflash
+set hlsearch
+set keywordprg=man\ -a
+set report=0
+set noincsearch
+set hidden
+"set isfname+=:
+nmap ,00 :buffer 0<CR>
+nmap ,01 :buffer 1<CR>
+nmap ,02 :buffer 2<CR>
+nmap ,03 :buffer 3<CR>
+nmap ,04 :buffer 4<CR>
+nmap ,05 :buffer 5<CR>
+nmap ,06 :buffer 6<CR>
+nmap ,07 :buffer 7<CR>
+nmap ,08 :buffer 8<CR>
+nmap ,09 :buffer 9<CR>
+
+nmap ,0 :buffer 0<CR>
+nmap ,1 :buffer 1<CR>
+nmap ,2 :buffer 2<CR>
+nmap ,3 :buffer 3<CR>
+nmap ,4 :buffer 4<CR>
+nmap ,5 :buffer 5<CR>
+nmap ,6 :buffer 6<CR>
+nmap ,7 :buffer 7<CR>
+nmap ,8 :buffer 8<CR>
+nmap ,9 :buffer 9<CR>
+nmap ,10 :buffer 10<CR>
+nmap ,11 :buffer 11<CR>
+nmap ,12 :buffer 12<CR>
+nmap ,13 :buffer 13<CR>
+nmap ,14 :buffer 14<CR>
+nmap ,15 :buffer 15<CR>
+nmap ,16 :buffer 16<CR>
+nmap ,17 :buffer 17<CR>
+nmap ,18 :buffer 18<CR>
+nmap ,19 :buffer 19<CR>
+nmap ,20 :buffer 20<CR>
+nmap ,21 :buffer 21<CR>
+nmap ,22 :buffer 22<CR>
+nmap ,23 :buffer 23<CR>
+nmap ,24 :buffer 24<CR>
+nmap ,25 :buffer 25<CR>
+nmap ,26 :buffer 26<CR>
+nmap ,27 :buffer 27<CR>
+nmap ,28 :buffer 28<CR>
+nmap ,29 :buffer 29<CR>
+nmap ,30 :buffer 30<CR>
+nmap ,31 :buffer 31<CR>
+nmap ,32 :buffer 32<CR>
+nmap ,33 :buffer 33<CR>
+nmap ,34 :buffer 34<CR>
+nmap ,35 :buffer 35<CR>
+nmap ,36 :buffer 36<CR>
+nmap ,37 :buffer 37<CR>
+nmap ,38 :buffer 38<CR>
+nmap ,39 :buffer 39<CR>
+nmap ,40 :buffer 40<CR>
+nmap ,41 :buffer 41<CR>
+nmap ,42 :buffer 42<CR>
+nmap ,43 :buffer 43<CR>
+nmap ,44 :buffer 44<CR>
+nmap ,45 :buffer 45<CR>
+nmap ,46 :buffer 46<CR>
+nmap ,47 :buffer 47<CR>
+nmap ,48 :buffer 48<CR>
+nmap ,49 :buffer 49<CR>
+nmap ,50 :buffer 50<CR>
+nmap ,51 :buffer 51<CR>
+nmap ,52 :buffer 52<CR>
+nmap ,53 :buffer 53<CR>
+nmap ,54 :buffer 54<CR>
+nmap ,55 :buffer 55<CR>
+nmap ,56 :buffer 56<CR>
+nmap ,57 :buffer 57<CR>
+nmap ,58 :buffer 58<CR>
+nmap ,59 :buffer 59<CR>
+nmap ,60 :buffer 60<CR>
+nmap ,61 :buffer 61<CR>
+nmap ,62 :buffer 62<CR>
+nmap ,63 :buffer 63<CR>
+nmap ,64 :buffer 64<CR>
+nmap ,65 :buffer 65<CR>
+nmap ,66 :buffer 66<CR>
+nmap ,67 :buffer 67<CR>
+nmap ,68 :buffer 68<CR>
+nmap ,69 :buffer 69<CR>
+nmap ,70 :buffer 70<CR>
+nmap ,71 :buffer 71<CR>
+nmap ,72 :buffer 72<CR>
+nmap ,73 :buffer 73<CR>
+nmap ,74 :buffer 74<CR>
+nmap ,75 :buffer 75<CR>
+nmap ,76 :buffer 76<CR>
+nmap ,77 :buffer 77<CR>
+nmap ,78 :buffer 78<CR>
+nmap ,79 :buffer 79<CR>
+nmap ,80 :buffer 80<CR>
+nmap ,81 :buffer 81<CR>
+nmap ,82 :buffer 82<CR>
+nmap ,83 :buffer 83<CR>
+nmap ,84 :buffer 84<CR>
+nmap ,85 :buffer 85<CR>
+nmap ,86 :buffer 86<CR>
+nmap ,87 :buffer 87<CR>
+nmap ,88 :buffer 88<CR>
+nmap ,89 :buffer 89<CR>
+nmap ,90 :buffer 90<CR>
+nmap ,91 :buffer 91<CR>
+nmap ,92 :buffer 92<CR>
+nmap ,93 :buffer 93<CR>
+nmap ,94 :buffer 94<CR>
+nmap ,95 :buffer 95<CR>
+nmap ,96 :buffer 96<CR>
+nmap ,97 :buffer 97<CR>
+nmap ,98 :buffer 98<CR>
+nmap ,99 :buffer 99<CR>
+nmap ,,  :ls<CR>
+
+"map ,ls :Explore<CR>
+map ,l :Explore<CR>
+"map ,n :cn<CR>
+"map ,p :cp<CR>
+set nu
+
+set shell=bash
+set history=2000
+"set scrolloff=999  "keep the cursor in the middle row
+set scrolloff=7
+set viminfo='100,<100,s10,%,/1000,:1000,f100
+set wildmenu
+set ruler
+set cmdheight=1
+set lz    "Do not redraw, when running macros.. lazyredraw
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+"set ignorecase
+set magic
+set noerrorbells
+"set t_vb=
+set showmatch
+set mat=2
+set autoread
+"set mouse=a
+"Set mapleader
+set laststatus=2
+"set statusline=\ %n:%f%m%r%y%=%l:%c/%L\ \ 
+
+set backup     "keep the backup files lying around
+set writebackup    "use a backupfile, while it is being written
+set swapfile      "use a swapfile
+
+" convenient mappings to use cscope
+" find symbol
+noremap fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+" functions calling this function 
+noremap fc :cs find c <C-R>=expand("<cword>")<CR><CR>
+" functions called by this function 
+noremap fd :cs find d <C-R>=expand("<cword>")<CR><CR>
+" find assignments
+noremap fa :cs find t <C-R>=expand("<cword>")<CR><CR>
+" find global definition
+noremap fg :cs find g <C-R>=expand("<cword>")<CR><CR>
+" find grep pattern
+noremap fp :cs find e <C-R>=expand("<cword>")<CR><CR>
+" find tag pattern
+noremap <c-\>  :tj  <C-R>=expand("<cword>")<CR><CR>:silent normal zO<CR>
+noremap <c-\>\ :tag <C-R>=expand("<cword>")<CR><CR>:silent normal zO<CR>
+noremap <c-\><c-\> :tag <C-R>=expand("<cword>")<CR><CR>:silent normal zO<CR>
+
+
+set t_Co=256
+"set t_AB=^[[48;5;%dm
+"set t_AF=^[[38;5;%dm
+
+
+"colorscheme desert
+"colorscheme wombat
+colorscheme wombat256
+"colorscheme wombat256mod
+
+"set mouse=nv "enable vim mouse in putty
+
+set foldopen&
+set foldnestmax=3
+set foldminlines=2
+"set foldcolumn=4
+set foldlevel=1
+nnoremap <Space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+set foldmethod=syntax
+
+set formatoptions=croqwanlvb1
+
+if version >= 703 
+   set undofile
+   set undodir=~/var/vim//        "undo files
+endif
+
+set directory=~/var/vim//         "swap files
+set backupdir=~/var/vim//         "backup files
+set backupskip+=cscope.files
+
+if version >= 703
+    nnoremap <c-1> <esc>:let x=matchadd('DiffAdd',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-2> <esc>:let x=matchadd('DiffChange',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-3> <esc>:let x=matchadd('DiffDelete',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-4> <esc>:let x=matchadd('DiffText',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-5> <esc>:let x=matchadd('SignColumn',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-6> <esc>:let x=matchadd('IncSearch',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-7> <esc>:let x=matchadd('MatchParen',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-8> <esc>:let x=matchadd('TabLineFill',"'" . expand("<cword>") . "'",-1)<cr>
+    nnoremap <c-9> <esc>:let x=matchadd('PmenuSel',"'" . expand("<cword>") . "'",-1)<cr>
+endif
+
+
+inoremap jj <esc>
+
+"use quickfix window for cscope results
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+"assuming dvorak layout
+let g:AlvgKeys= "normal"
+function! AlvgKeysToggle()
+    if g:AlvgKeys== "normal"
+        let g:AlvgKeys= "browse"
+        nmap m ,b
+        nmap z ,n 
+        nnoremap w b
+        nnoremap v w
+        nnoremap l <c-]>
+        nnoremap g <c-T>
+        nmap d fg
+        nmap - fs
+        nmap c <C-O>
+        nmap r <C-I>
+	"to make fold accessible in browse mode
+        nnoremap b z
+        nmap ,n  :cn<cr>bO<cr>
+        nmap ,p  :cp<cr>bO<cr>
+	    nnoremap ff gf
+    if version >= 703 | set norelativenumber number| endif
+    elseif g:AlvgKeys == "browse"
+        let g:AlvgKeys = "normal"
+        nunmap m
+        nunmap z
+        nunmap w
+        nunmap v
+        nunmap l
+        nunmap g
+        nunmap d
+        nunmap -
+        nunmap c
+        nunmap r
+        nunmap b
+        nmap ,n  :cn<cr>zO<cr>
+        nmap ,p  :cp<cr>zO<cr>
+	nunmap  ff
+        if version >= 703 | set relativenumber | endif
+    endif
+endfunction
+    
+if version >= 703 | set relativenumber | endif
+nnoremap ,t :call AlvgKeysToggle()<cr>:echo g:AlvgKeys<cr>
+
+
+filetype plugin indent on
+syntax enable
+
+
+" autocmd VimEnter * execute 'source Session.vim'
+" autocmd VimLeave * execute 'mksession!'
+
+" restore session only if invoked without args
+autocmd VimEnter * execute 'if argc()==0 | source Session.vim | endif'
+autocmd VimLeave * execute 'if !empty(v:this_session) | mksession! | endif'
+

@@ -1,0 +1,29 @@
+nnoremap h h
+nnoremap t j
+nnoremap n k
+nnoremap s l
+vnoremap h h
+vnoremap t j
+vnoremap n k
+vnoremap s l
+
+nnoremap j n
+nnoremap k N
+vnoremap j n
+nnoremap k N
+
+
+"nnoremap j t
+"nnoremap k n
+"vnoremap j t
+"nnoremap k n
+
+"nnoremap l n
+"nnoremap L N
+"vnoremap l n
+"vnoremap L N
+
+"nnoremap j t
+"nnoremap k s
+"vnoremap j t
+"vnoremap k s
